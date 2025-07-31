@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emoji to Text Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f8ff;
+      padding: 40px;
+    }
+    .emoji {
+      font-size: 100px;
+      margin: 20px 0;
+    }
+    input {
+      padding: 10px;
+      font-size: 18px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 15px 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #result {
+      font-size: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Emoji to Text Guessing Game</h1>
+  <div class="emoji" id="emojiDisplay">🎂</div>
+
+  <input type="text" id="guessInput" placeholder="Type your guess here..." autocomplete="off" />
+  <br />
+
+  <button id="checkBtn">Check Answer</button>
+  <button id="nextBtn">Next Emoji</button>
+
+  <div id="result"></div>
+
+  <script>
+    const emojiDict = {
+      "🎂": "cake",
+      "🚗": "car",
+      "🐍": "snake",
+      "📚": "books",
+      "🎧": "headphones",
+      "🏠": "house",
+      "☕": "coffee",
+      "😂": "laugh",
